@@ -1,0 +1,7 @@
+<main class="p-12 mx-auto text-gray-800 max-w-7xl">
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title, wrapper_html: { class: 'text-2xl w-50' } %>
+  <%= f.input :content, wrapper_html: { class: 'text-2xl' } %>
+  <%= f.button :submit, wrapper_html: { class: 'text-2xl' }, as: :text %>
+<% end %>
+</main>

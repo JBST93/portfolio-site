@@ -1,0 +1,18 @@
+<h2 class="py-2 text-2xl dark:text-white">List of posts</h2>
+
+    <% @posts.each do |post| %>
+      <ul class="relative w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white mb-2">
+        <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+            <%= link_to post.title, post_path(post) %>
+              <button class="bg-red-500 border-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full absolute top-0 right-2">
+                <%= link_to "X", post_path(post), data: { "turbo-method": :delete } %>
+            </button>
+        </li>
+      </ul>
+    <% end %>
+
+    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+      <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+        Read more
+      </span>
+    </button>
