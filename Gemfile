@@ -77,6 +77,6 @@ gem 'simple_form'
 
 gem "devise", "~> 4.9"
 
-gem 'activeadmin'
-
 gem 'sass-rails'
+
+gem "font-awesome-sass"
